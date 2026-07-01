@@ -1,1 +1,77 @@
-ECHO est� ativado.
+/* 1. Configuração Geral para limpar as margens do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Estilo do fundo da página */
+body {
+    background-color: #f0f2f5; /* Um cinza bem clarinho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Faz o conteúdo ficar centralizado na tela toda */
+}
+
+/* 3. Estilo dos títulos e textos */
+h1 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 4. Estilo dos blocos das notas */
+div {
+    margin-bottom: 15px;
+    width: 250px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Deixa os cantos da caixinha arredondados */
+}
+
+/* 5. Estilo do Botão */
+button {
+    background-color: #238636; /* Um verde bonito, parecido com o do GitHub */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer; /* Faz o ponteiro do mouse virar a "mãozinha" de clique */
+    width: 250px;
+    margin-top: 10px;
+}
+
+/* Efeito quando o usuário passa o mouse por cima do botão */
+button:hover {
+    background-color: #2ea043; /* O verde fica um pouco mais claro */
+}
+
+/* 6. Estilo da caixinha onde o resultado vai aparecer */
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
