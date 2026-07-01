@@ -3,75 +3,124 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive;
 }
 
 /* 2. Estilo do fundo da página */
 body {
-    background-color: #f0f2f5; /* Um cinza bem clarinho */
+    background-color: #f7f9fa; /* Fundo claro do esboço */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Faz o conteúdo ficar centralizado na tela toda */
+    align-items: flex-start; /* Mantém o conteúdo do formulário alinhado à esquerda */
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
-/* 3. Estilo dos títulos e textos */
+/* 2.5. NOVO: Estilo do Header (A faixa lilás do topo) */
+header, .header-container {
+    background-color: #c4b5fd; /* Cor lilás/roxa clara do topo */
+    width: 100%; /* Faz a faixa ocupar a tela inteira de ponta a ponta */
+    padding: 15px 0;
+    text-align: center; /* Centraliza o título dentro da faixa */
+    margin-bottom: 30px; /* Espaço entre a faixa e o resto do texto */
+}
+
+/* 3. Estilo do título (Modificado para se ajustar dentro do Header) */
 h1 {
-    color: #333333;
-    margin-bottom: 10px;
+    color: #000000; /* Texto branco para destacar no lilás, ou #000 se preferir preto */
+    font-size: 36px;
+    display: inline-block;
+    text-decoration: underline; /* Adiciona o sublinhado do esboço */
+    font-weight: bold;
+}
+
+/* --- O restante do conteúdo abaixo do header ganha um recuo para não colar na tela --- */
+.conteudo-pagina {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
 }
 
 p {
-    color: #666666;
-    margin-bottom: 20px;
-    text-align: center;
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 600px;
+    line-height: 1.4;
 }
 
 /* 4. Estilo dos blocos das notas */
 div {
     margin-bottom: 15px;
-    width: 250px;
+    width: 320px;
 }
 
 label {
     display: block;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #444;
+    color: #000000;
 }
 
 input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px; /* Deixa os cantos da caixinha arredondados */
+    border: 2px solid #000000;
+    border-radius: 0px;
+    font-size: 18px;
+    background-color: #ffffff;
 }
 
 /* 5. Estilo do Botão */
 button {
-    background-color: #238636; /* Um verde bonito, parecido com o do GitHub */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    background-color: #ba87df; /* Roxo do botão "Ver média" */
+    color: black;
+    border: 2px solid #000000;
+    padding: 8px 15px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer; /* Faz o ponteiro do mouse virar a "mãozinha" de clique */
-    width: 250px;
+    cursor: pointer;
+    width: auto;
     margin-top: 10px;
-}
-
-/* Efeito quando o usuário passa o mouse por cima do botão */
+    margin-bottom: 25px;}
 button:hover {
-    background-color: #2ea043; /* O verde fica um pouco mais claro */
+    background-color: #a36ec7;
 }
 
-/* 6. Estilo da caixinha onde o resultado vai aparecer */
+/* Linha divisória horizontal */
+hr {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    border-top: 2px solid #000000;
+    margin-bottom: 25px;
+}
+
+/* 6. Estilo do resultado */
 #resultado {
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-    color: #333;
-    text-align: center;
+    color: #000000;
+    text-align: left;
+    line-height: 1.8;
+}
+
+#resultado img {
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 35px;
+}
+
+#resultado p {
+    display: flex;
+    align-items: center; /* Alinha o texto e a imagem verticalmente no meio */
+    margin-bottom: 10px;
+}
+
+#resultado img {
+    margin-left: 10px; /* Dá um espacinho entre o texto e a foto */
+    height: 40px;      /* Controla a altura da imagem para combinar com o texto */
+    width: auto;
 }

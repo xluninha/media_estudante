@@ -13,8 +13,22 @@ botao.addEventListener('click', function() {
         return;
     }
 
+    // Calcula a média final
     const mediaFinal = (n1 + n2) / 2;
 
-    divResultado.style.color = "#333";
-    divResultado.innerHTML = `A média do aluno é: ${mediaFinal.toFixed(1)}`; 
+    // Reseta a cor para preto/padrão do esboço
+    divResultado.style.color = "#000000"; 
+    
+    // Cria a estrutura que vai segurar as duas linhas (Média e Situação)
+    let htmlResultado = `<p>A média do aluno é: ${mediaFinal.toFixed(1)}</p>`;
+
+    // Verifica se passou (exemplo usando média maior ou igual a 6)
+    if (mediaFinal >= 6) {
+        htmlResultado += `<p>Situação: pabens paso <img src="img/cachorropirulito.jpg" alt="Cachorro de chapéu"></p>`;
+    } else {
+        htmlResultado += `<p>Situação: nao paso beta moggado <img src="img/betamoggado.png" alt="Meme reprovado"></p>`;
+    }
+
+    // Joga tudo para dentro da div de resultado de uma vez só
+    divResultado.innerHTML = htmlResultado;
 });
