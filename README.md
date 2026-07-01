@@ -3,8 +3,8 @@
 Um site simples e rápido para calcular a média de notas dos alunos e verificar se foram aprovados.
 
 ##  Tecnologias Utilizadas
-* HTML5
-* CSS3
+* HTML
+* CSS
 * JavaScript
 
 ## ⚙️ Como Funciona
