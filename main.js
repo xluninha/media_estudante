@@ -1,32 +1,20 @@
-// Seleciona o botão e a caixa onde o resultado vai aparecer
-const btnCalcular = document.getElementById('btnCalcular');
-const resultadoDiv = document.getElementById('resultado');
+const botao = document.getElementById('btnCalcular');
+const campoNota1 = document.getElementById('nota1');
+const campoNota2 = document.getElementById('nota2');
+const divResultado = document.getElementById('resultado');
 
-btnCalcular.addEventListener('click', function() {
-    // Captura os valores dos inputs e converte para números decimais (float)
-    const nota1 = parseFloat(document.getElementById('nota1').value);
-    const nota2 = parseFloat(document.getElementById('nota2').value);
-    const nota3 = parseFloat(document.getElementById('nota3').value);
+botao.addEventListener('click', function() {
+    const n1 = parseFloat(campoNota1.value);
+    const n2 = parseFloat(campoNota2.value);
 
-    // Validação simples: verifica se todos os campos foram preenchidos
-    if (isNaN(nota1) || !nota2 || isNaN(nota3)) {
-        resultadoDiv.className = "resultado-box reprovado";
-        resultadoDiv.innerHTML = "Por favor, preencha todas as notas corretamente.";
+    if (isNaN(n1) || isNaN(n2)) {
+        divResultado.innerHTML = "Por favor, digite as duas notas primeiro!";
+        divResultado.style.color = "red";
         return;
     }
 
-    // Calcula a média das três notas
-    const media = (nota1 + nota2 + nota3) / 3;
+    const mediaFinal = (n1 + n2) / 2;
 
-    // Remove a classe 'hidden' para mostrar a div de resultado
-    resultadoDiv.classList.remove('hidden');
-
-    // Define se foi aprovado ou reprovado (Média para passar: 7.0)
-    if (media >= 7) {
-        resultadoDiv.className = "resultado-box aprovado";
-        resultadoDiv.innerHTML = `Média: ${media.toFixed(1)} <br> 🎉 Parabéns! Você foi Aprovado(a)!`;
-    } else {
-        resultadoDiv.className = "resultado-box reprovado";
-        resultadoDiv.innerHTML = `Média: ${media.toFixed(1)} <br> ❌ Ih, ficou de recuperação/reprovado.`;
-    }
+    divResultado.style.color = "#333";
+    divResultado.innerHTML = `A média do aluno é: ${mediaFinal.toFixed(1)}`; 
 });
